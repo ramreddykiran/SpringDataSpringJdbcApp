@@ -1,5 +1,7 @@
 package com.spring.controller;
 
+import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,16 +15,22 @@ import com.spring.service.FranchiseOrderService;
 
 @Controller
 @RequestMapping("franchise-order")
+@Slf4j
 public class FranchiseOrderController {
-	
+
 	@Autowired
 	private FranchiseOrderService franchiseOrderService;
-	
-	@RequestMapping(method=RequestMethod.POST)
+
+	@RequestMapping(method = RequestMethod.POST)
 	public ResponseEntity<?> saveFranchiseOrder(@RequestBody FranchiseOrder order) {
-		franchiseOrderService.saveFranchiseOrder(order);
-		return new ResponseEntity<String>("franchise order saved successfully",HttpStatus.OK);
-		
+		try {
+			franchiseOrderService.saveFranchiseOrder(order);
+			return new ResponseEntity<String>("franchise order saved successfully", HttpStatus.OK);
+		} catch (Exception e) {
+			String errorMsg = "Unable to save franchise order ";
+			log.error(errorMsg + " {}", e.getMessage());
+			return new ResponseEntity<String>(errorMsg + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 	}
 
 }
