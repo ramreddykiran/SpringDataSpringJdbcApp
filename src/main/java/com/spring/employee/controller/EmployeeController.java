@@ -25,7 +25,7 @@ public class EmployeeController {
 	public ResponseEntity<?> save(@RequestBody Employee employee) {
 		try{
 			employeeService.saveEmployee(employee);
-			return new ResponseEntity<String>("employee save successfully", HttpStatus.OK);
+			return new ResponseEntity<String>("employee saved successfully", HttpStatus.OK);
 		}catch(Exception e) {
 			String errorMsg = "Unable to save employee details ";
 			log.error(errorMsg + "{}",e.getMessage());

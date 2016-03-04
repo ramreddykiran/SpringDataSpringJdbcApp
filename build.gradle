@@ -1,5 +1,5 @@
-apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'java'
 apply plugin: 'war'
 
 
@@ -25,6 +25,13 @@ compile "javax.servlet:servlet-api:2.5"
 compile "org.projectlombok:lombok:0.11.6"
 compile "org.projectlombok:lombok:0.11.6:sources"
 compile "com.google.guava:guava:14.0.1"
+compile 'org.jasypt:jasypt:1.9.0'
+compile 'commons-io:commons-io:2.4'
+compile 'commons-codec:commons-codec:1.9'
+compile 'org.jasypt:jasypt-spring31:1.9.2'
+
+
+
 
 
 }

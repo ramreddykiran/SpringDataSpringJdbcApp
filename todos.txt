@@ -1,0 +1,3 @@
+1.Need to apply encryption logic for oracle password issue
+Once encrypt logic works successfully,  Remove CodecUtil.java.
+ It may or may not needed and check functionality again
