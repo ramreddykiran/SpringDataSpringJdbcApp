@@ -1,4 +1,4 @@
-package com.spring.repository;
+package com.spring.mongo.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;

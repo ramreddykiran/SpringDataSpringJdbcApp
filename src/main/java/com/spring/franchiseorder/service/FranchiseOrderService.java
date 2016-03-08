@@ -1,4 +1,4 @@
-package com.spring.service;
+package com.spring.franchiseorder.service;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.spring.domain.FranchiseOrder;
 import com.spring.exception.FranchiseOrderValidationException;
-import com.spring.repository.FracnhiseOrderRepository;
+import com.spring.mongo.repository.FracnhiseOrderRepository;
 
 @Service
 public class FranchiseOrderService {

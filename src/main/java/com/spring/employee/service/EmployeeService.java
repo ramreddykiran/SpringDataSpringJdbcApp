@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.spring.domain.employee.Employee;
-import com.spring.employee.repository.EmployeeRepository;
 import com.spring.exception.EmployeevalidationFailedException;
+import com.spring.jdbc.employee.repository.EmployeeRepository;
 
 @Service
 public class EmployeeService {

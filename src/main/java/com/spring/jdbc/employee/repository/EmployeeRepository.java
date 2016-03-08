@@ -1,4 +1,4 @@
-package com.spring.employee.repository;
+package com.spring.jdbc.employee.repository;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -21,8 +21,7 @@ public class EmployeeRepository {
 			+ "WHEN MATCHED THEN UPDATE SET EMPAGE=?,EMPSALARY=?,LST_UPDT_DTTM=SYSDATE "
 			+ "WHEN NOT MATCHED THEN INSERT (EMPID,EMPNAME,EMPAGE,EMPSALARY,JOIN_DATE,LEAVING_DATE,CRT_DTTM,LST_UPDT_DTTM) "
 			+ "VALUES (?,?,?,?,?,?,SYSDATE,SYSDATE)";
-	//TODO:Need to implement merge query if the employee record already present
-	// update it; else insert it
+
 	public void saveEmployee(final Employee employee) {
 		springJdbcTemplate.execute(INSERT_EMPLOYEE,new PreparedStatementCallback<Boolean>() {
 			@Override

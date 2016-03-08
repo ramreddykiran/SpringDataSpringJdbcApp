@@ -1,4 +1,4 @@
-package com.spring.controller;
+package com.spring.franchiseorder.controller;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.spring.domain.FranchiseOrder;
-import com.spring.service.FranchiseOrderService;
+import com.spring.franchiseorder.service.FranchiseOrderService;
 
 @Controller
 @RequestMapping("franchise-order")
