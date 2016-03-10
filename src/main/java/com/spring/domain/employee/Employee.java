@@ -2,11 +2,13 @@ package com.spring.domain.employee;
 
 import java.sql.Date;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
 @Setter
 @Getter
+@Builder
 public class Employee {
 	
 	private String empId;

@@ -19,14 +19,8 @@ public class Invoice {
     @Id
 	private int invoiceNumber;
     private String applicationName;
-    private String invoiceDate;
     private String invoiceEffectiveDate;
 	private int shippingLocationCode;
-	private String uniqueShippingIndicator;
-	private String partnerNumber;
-	private String partnerName; 
-	private String orderNumber;
-	private String brandName;
 	private String seasonName;
 	private String countryOfDestination;
 	private String currencyCode;
