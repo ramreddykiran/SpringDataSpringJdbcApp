@@ -28,6 +28,8 @@ compile 'org.jasypt:jasypt:1.9.0'
 compile 'commons-io:commons-io:2.4'
 compile 'commons-codec:commons-codec:1.9'
 compile 'org.jasypt:jasypt-spring31:1.9.2'
+compile 'commons-dbcp:commons-dbcp:1.4'
+
 testCompile "junit:junit:4.11"
 testCompile "org.mockito:mockito-all:1.9.5"
 testCompile "org.hamcrest:hamcrest-all:1.3"
