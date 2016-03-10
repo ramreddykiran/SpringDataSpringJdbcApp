@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.spring.domain.FranchiseOrder;
 import com.spring.exception.FranchiseOrderValidationException;
-import com.spring.mongo.repository.FracnhiseOrderRepository;
+import com.spring.mongo.franchiseorder.repository.FracnhiseOrderRepository;
 
 @Service
 public class FranchiseOrderService {
