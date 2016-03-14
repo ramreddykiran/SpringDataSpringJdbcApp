@@ -1,4 +1,4 @@
-package com.spring.employee.service;
+package com.spring.service;
 import java.util.Optional;
 
 import org.apache.commons.lang3.StringUtils;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.spring.domain.employee.Employee;
 import com.spring.exception.EmployeevalidationFailedException;
-import com.spring.jdbc.employee.repository.EmployeeRepository;
+import com.spring.jdbc.repository.EmployeeRepository;
 
 @Service
 public class EmployeeService {

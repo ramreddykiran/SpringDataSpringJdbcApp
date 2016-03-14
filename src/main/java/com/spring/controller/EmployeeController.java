@@ -1,4 +1,4 @@
-package com.spring.employee.controller;
+package com.spring.controller;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.spring.domain.employee.Employee;
-import com.spring.employee.service.EmployeeService;
+import com.spring.service.EmployeeService;
 
 @Controller
 @RequestMapping("/employee")

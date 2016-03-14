@@ -1,4 +1,4 @@
-package com.spring.mongo.franchiseorder.repository;
+package com.spring.mongo.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -14,6 +14,7 @@ public class FracnhiseOrderRepository {
 
 	public void saveFracnhiseOrder(FranchiseOrder order) {
 		mongoTemplate.save(order);
+		
 	}
 
 }

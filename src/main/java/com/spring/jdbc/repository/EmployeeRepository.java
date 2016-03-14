@@ -1,15 +1,12 @@
-package com.spring.jdbc.employee.repository;
+package com.spring.jdbc.repository;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
-import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCallback;
-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.spring.domain.employee.Employee;
@@ -19,17 +16,13 @@ public class EmployeeRepository {
 	
 	@Autowired
 	private JdbcTemplate springJdbcTemplate;
-	@Autowired
-	private NamedParameterJdbcTemplate npjt;
 	
-	javax.sql.DataSource ds;
 	private String INSERT_EMPLOYEE="MERGE INTO EMPLOYEE USING DUAL ON (EMPID=? AND EMPNAME=?) "
 			+ "WHEN MATCHED THEN UPDATE SET EMPAGE=?,EMPSALARY=?,LST_UPDT_DTTM=SYSDATE "
 			+ "WHEN NOT MATCHED THEN INSERT (EMPID,EMPNAME,EMPAGE,EMPSALARY,JOIN_DATE,LEAVING_DATE,CRT_DTTM,LST_UPDT_DTTM) "
 			+ "VALUES (?,?,?,?,?,?,SYSDATE,SYSDATE)";
 
 	public void saveEmployee(final Employee employee) {
-		//springJdbcTemplate.getDataSource().getConnection().commit()
 		springJdbcTemplate.execute(INSERT_EMPLOYEE,new PreparedStatementCallback<Boolean>() {
 			@Override
 			public Boolean doInPreparedStatement(PreparedStatement ps) throws SQLException, DataAccessException {
