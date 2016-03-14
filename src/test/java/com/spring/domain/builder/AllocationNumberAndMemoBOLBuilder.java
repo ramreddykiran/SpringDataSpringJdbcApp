@@ -11,8 +11,8 @@ interface IAllocationNumberAndMemoBOLBuilder{
 public class AllocationNumberAndMemoBOLBuilder implements IAllocationNumberAndMemoBOLBuilder,Builder<AllocationNumberAndMemoBOL>{
 	
 	private InvoiceLineItemBuilder parentBuilder;
-	private Long allocationNumber;
-    private String memoBOL;
+	private Long allocationNumber = 352792l;
+    private String memoBOL = "default memobol";
     
 	public AllocationNumberAndMemoBOLBuilder(InvoiceLineItemBuilder parentBuilder){
 		this.parentBuilder = parentBuilder;

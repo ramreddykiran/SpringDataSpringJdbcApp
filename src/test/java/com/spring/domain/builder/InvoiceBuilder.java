@@ -15,12 +15,12 @@ public class InvoiceBuilder implements Builder<Invoice>{
     private String applicationName;
     private String invoiceEffectiveDate;
 	private int shippingLocationCode;
-	private String seasonName;
-	private String countryOfDestination;
+	private String seasonName = "FA";
+	private String countryOfDestination = "CHINA";
 	private String currencyCode;
 	private double freightCost;
-	private String status;
-	private Date createdDate ;
+	private String status = "OPEN";
+	private Date createdDate = new Date();
 	private Date updatedDate;
 	
 	private List<InvoiceLineItemBuilder> invoiceLineItems = Lists.newArrayList();

@@ -17,7 +17,7 @@ public class InvoiceLineItemBuilder implements IInvoiceLineItemBuilder,Builder<I
 
 	InvoiceBuilder parentBuilder;
 	
-	private int itemId;
+	private int itemId = 497978928;
 	private String itemDesc;
 	private HardTag hardTag;
 	private Set<AllocationNumberAndMemoBOLBuilder> allocationNumberAndMemoBOLs = Sets.newHashSet();
@@ -35,6 +35,7 @@ public class InvoiceLineItemBuilder implements IInvoiceLineItemBuilder,Builder<I
 		for(AllocationNumberAndMemoBOLBuilder allocationNumAndMemoBOL : allocationNumberAndMemoBOLs) {
 			set.add(allocationNumAndMemoBOL.build());
 		}
+		invoiceLineItem.setAllocationNumberAndMemoBOLs(set);
 		return invoiceLineItem;
 	}
 	

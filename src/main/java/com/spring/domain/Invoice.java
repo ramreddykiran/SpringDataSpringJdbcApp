@@ -10,7 +10,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="Invoice")
+@Document(collection="invoice")
 @Getter
 @Setter
 @JsonSerialize()
